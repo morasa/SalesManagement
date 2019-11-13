@@ -1,0 +1,16 @@
+li{
+    cursor:pointer;
+}
+a{
+    color:black;
+}
+a:hover{
+    text-decoration: none;
+    color:black;
+}
+li:hover{
+    background:black;
+}
+li:hover a{
+    color:white;
+}

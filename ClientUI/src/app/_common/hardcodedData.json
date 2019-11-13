@@ -1,0 +1,25 @@
+{
+    "users": [
+        {
+            "name": "Aditya",
+            "password": "aditya12345",
+            "type": "admin"
+        },
+        {
+            "name": "Kranti",
+            "password": "kranti12345",
+            "type": "staff"
+        },
+        {
+            "name": "Shiva",
+            "password": "shiva12345",
+            "type": "staff"
+        }
+    ],
+    "status": [
+        "Delivered",
+        "Created",
+        "Cancelled",
+        "Progress"
+    ]
+}

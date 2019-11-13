@@ -1,0 +1,21 @@
+<table class="table table-striped text-center">
+    <thead class="bg-dark text-light">
+        <tr>
+            <th>Order ID</th>
+            <th>New Order</th>
+            <th>Created By</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of currentOrders">
+            <td>{{order.order_id}}</td>
+            <td>{{order.created_date}}</td>
+            <td>{{order.created_by}}</td>
+            <td>
+                
+                {{order.status}}
+            </td>
+        </tr>
+    </tbody>
+</table>

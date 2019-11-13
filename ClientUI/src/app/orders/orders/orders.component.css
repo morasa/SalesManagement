@@ -1,0 +1,23 @@
+li{
+    cursor:pointer;
+}
+a{
+    color:black;
+}
+a:hover{
+    text-decoration: none;
+    color:black;
+}
+li:hover{
+    background:lightblue;
+}
+li:hover a{
+    color:black;
+}
+
+.activeRouter{
+    background:black;
+}
+.activeRouter a{
+    color:white;
+}
