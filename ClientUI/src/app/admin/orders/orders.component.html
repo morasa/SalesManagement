@@ -1,12 +1,7 @@
-<div class="mx-auto w-50">
-    <div class="nav nav-pills" id="v-pills-tab" role="tablist">
-        <a class="nav-link active" data-toggle="pill" href="javascript:void(0);" routerLink="./">Current Orders</a>
-        <a class="nav-link" data-toggle="pill" href="javascript:void(0);" routerLink="./new-order">New Order</a>
-        <a class="nav-link" data-toggle="pill" href="javascript:void(0);" routerLink="./generate-order">Generate
-            Order</a>
-    </div>
+<div class="row border text-center">
+    <div class="col p-2 border" routerLink="./dashboard" routerLinkActive="active">Dashboard</div>
+    <div class="col p-2 border" routerLink="./current-orders" routerLinkActive="active">Track Orders</div>
+    <div class="col p-2 border" routerLink="./new-order" routerLinkActive="active">Add Items to Order</div>
+    <div class="col p-2 border" routerLink="./generate-order" routerLinkActive="active">Review and Confirm Order</div>
 </div>
-
-<div class="m-3">
-    <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>

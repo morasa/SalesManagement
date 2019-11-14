@@ -11,10 +11,10 @@ import { AdminComponent } from "./admin/admin.component";
 import { CurrentOrdersComponent } from "./orders/current-orders/current-orders.component";
 import { GenerateOrderComponent } from "./orders/generate-order/generate-order.component";
 import { NewOrderComponent } from "./orders/new-order/new-order.component";
+import { DashboardComponent } from "./orders/dashboard/dashboard.component";
 
-
-import {ProductDetailsComponent} from "../admin/products/product-details/product-details.component";
-import {AddProductsComponent} from "../admin/products/add-products/add-products.component";
+import { ProductDetailsComponent } from "../admin/products/product-details/product-details.component";
+import { AddProductsComponent } from "../admin/products/add-products/add-products.component";
 
 const routes: Routes = [
   {
@@ -27,17 +27,20 @@ const routes: Routes = [
         path: "",
         component: OrdersComponent,
         children: [
-          { path: "", component: CurrentOrdersComponent },
+          { path: "dashboard", component: DashboardComponent },
+          { path: "current-orders", component: CurrentOrdersComponent },
           { path: "generate-order", component: GenerateOrderComponent },
-          { path: "new-order", component: NewOrderComponent }
+          { path: "new-order", component: NewOrderComponent },
+          { path: "", redirectTo: "dashboard", pathMatch: "full" }/* this line is not working */
         ]
       },
       { path: "prices", component: PricesComponent },
-      { path: "products", component: ProductsComponent,
-      children: [
-        {path:'', component :ProductDetailsComponent},
-        {path:'add-product', component:AddProductsComponent}
-      ]
+      {
+        path: "products", component: ProductsComponent,
+        children: [
+          { path: '', component: ProductDetailsComponent },
+          { path: 'add-product', component: AddProductsComponent }
+        ]
       },
     ]
   }

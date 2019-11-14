@@ -1,24 +1,47 @@
-<table class="table table-striped text-center">
-    <thead class="bg-dark text-light">
-        <tr>
-            <th>Order ID</th>
-            <th>New Order</th>
-            <th>Created By</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let order of currentOrders">
-            <td>{{order.order_id}}</td>
-            <td>{{order.created_date}}</td>
-            <td>{{order.created_by}}</td>
-            <td>
-                <select name="" class="form-control">
-                    <option *ngFor="let opt of status; let i = index">
-                        {{opt}}
-                    </option>
+<div class="container">
+        <br>
+    <h5>Search</h5>
+    <div>
+        <div class="row border" style="padding-top:10px">
+            <div class="col">
+                <label for="" class="p-1 w-50 text-center">Order Status</label>
+                <select name="" id="" class="p-1 w-50">
+                    <option value="" disabled>Select Status</option>
                 </select>
-            </td>
-        </tr>
-    </tbody>
-</table>
+            </div>
+            <div class="col">
+                <label for="" class="p-1 w-50 text-center">Created Date</label>
+                <input type="text" name="" id="" onfocus="(this.type='date')" placeholder="From Date" class="p-1  w-50">
+            </div>
+            <div class="col">
+                <label for="" class="p-1 w-50 text-center">Created Date</label>
+                <input type="text" name="" id="" onfocus="(this.type='date')" placeholder="To Date" class="p-1 w-50">
+            </div>
+        </div>
+        <div class="row border p-4"></div>
+    </div>
+    <br>
+    <div class="">
+        <h5>Orders List</h5>
+        <div class="row">
+            <table class="table table-bordered text-center">
+                <thead class="">
+                    <tr>
+                        <th>Order ID</th>
+                        <th>New Order</th>
+                        <th>Created By</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of currentOrders">
+                        <td>{{order.order_id}}</td>
+                        <td>{{order.created_date}}</td>
+                        <td>{{order.created_by}}</td>
+                        <td>{{order.status}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
