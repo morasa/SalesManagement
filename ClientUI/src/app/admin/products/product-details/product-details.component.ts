@@ -10,7 +10,7 @@ product_details = Productdetails['default']
   constructor() { }
 
   ngOnInit() {
-    console.log(this.product_details)
+    //console.log(this.product_details)
   }
 
 }
