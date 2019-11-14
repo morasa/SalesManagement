@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CurrentOrders } from "../../models/current-orders";
-import users from "../../_common/hardcodedData.json";
 
+import * as dummy from "../../../common/config/dummy.json";
 @Component({
   selector: 'app-current-orders',
   templateUrl: './current-orders.component.html',
@@ -10,19 +9,19 @@ import users from "../../_common/hardcodedData.json";
 export class CurrentOrdersComponent implements OnInit {
   status: Array<string>;
 
-  currentOrders: CurrentOrders[] = [
+  currentOrders = [
     {
       order_id: Math.ceil(Math.random() * 100000),
       created_date: Date.now(),
-      created_by: users.users[Math.floor(Math.random() * users.users.length)].name,
-      status: users.status[(Math.floor(Math.random() * users.status.length))]
+      created_by: dummy.users[Math.floor(Math.random() * dummy.users.length)].name,
+      status: dummy.status[(Math.floor(Math.random() * dummy.status.length))]
     }
   ]
 
   constructor() { }
 
   ngOnInit() {
-    this.status = users.status;
+    this.status = dummy.status;
     this.initiateList();
   }
   initiateList() {
@@ -32,8 +31,8 @@ export class CurrentOrdersComponent implements OnInit {
           {
             order_id: Math.ceil(Math.random() * 100000),
             created_date: Date.now(),
-            created_by: users.users[Math.floor(Math.random() * users.users.length)].name,
-            status: users.status[(Math.floor(Math.random() * users.status.length))]
+            created_by: dummy.users[Math.floor(Math.random() * dummy.users.length)].name,
+            status: dummy.status[(Math.floor(Math.random() * dummy.status.length))]
           }
         );
       }, 1000);

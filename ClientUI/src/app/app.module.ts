@@ -3,29 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { OrdersModule } from "./orders/orders.module";
-import { LoginModule } from "./login/login.module";
-
+import { AdminModule } from './admin/admin.module';
+import { UsersModule } from './users/users.module';
+import { LoginModule } from './login/login.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-
-import { httpInterceptor } from "./middleware/http-inceptor";
+import { CommonComponentComponent } from './common-component/common-component.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CommonComponentComponent
   ],
   imports: [
     BrowserModule,
+    AdminModule,
+    UsersModule,
     LoginModule,
-    OrdersModule,
-    AppRoutingModule
+    AppRoutingModule   
   ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: httpInterceptor, multi: true }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
