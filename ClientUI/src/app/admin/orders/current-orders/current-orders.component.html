@@ -1,8 +1,8 @@
+<br>
 <div class="container">
-        <br>
     <h5>Search</h5>
-    <div>
-        <div class="row border" style="padding-top:10px">
+    <div class="">
+        <div class="row border border-bottom-0" style="padding-top:10px">
             <div class="col">
                 <label for="" class="p-1 w-50 text-center">Order Status</label>
                 <select name="" id="" class="p-1 w-50">
@@ -18,27 +18,32 @@
                 <input type="text" name="" id="" onfocus="(this.type='date')" placeholder="To Date" class="p-1 w-50">
             </div>
         </div>
-        <div class="row border p-4"></div>
+        <div class="row border"></div>
+        <div class="row border p-4 border-top-0"></div>
     </div>
     <br>
     <div class="">
         <h5>Orders List</h5>
         <div class="row">
-            <table class="table table-bordered text-center">
+            <table class="table table-bordered text-center m-1">
                 <thead class="">
                     <tr>
+                        <th>S.No.</th>
                         <th>Order ID</th>
-                        <th>New Order</th>
                         <th>Created By</th>
+                        <th>Created Date</th>
                         <th>Status</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let order of currentOrders">
+                    <tr *ngFor="let order of currentOrders; let i=index">
+                        <td>{{i}}</td>
                         <td>{{order.order_id}}</td>
-                        <td>{{order.created_date}}</td>
                         <td>{{order.created_by}}</td>
+                        <td>{{order.created_date}}</td>
                         <td>{{order.status}}</td>
+                        <td><input type="button" value="Show Details" class="btn btn-info"></td>
                     </tr>
                 </tbody>
             </table>

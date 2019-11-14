@@ -24,14 +24,13 @@ const routes: Routes = [
       { path: "discounts", component: DiscountsComponent },
       { path: "items", component: ItemsComponent },
       {
-        path: "",
+        path: "orders",
         component: OrdersComponent,
         children: [
           { path: "dashboard", component: DashboardComponent },
           { path: "current-orders", component: CurrentOrdersComponent },
           { path: "generate-order", component: GenerateOrderComponent },
-          { path: "new-order", component: NewOrderComponent },
-          { path: "", redirectTo: "dashboard", pathMatch: "full" }/* this line is not working */
+          { path: "new-order", component: NewOrderComponent }          
         ]
       },
       { path: "prices", component: PricesComponent },
