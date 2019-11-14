@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Router } from "@angular/router";
-
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
@@ -9,13 +7,9 @@ import { Router } from "@angular/router";
 })
 export class OrdersComponent implements OnInit {
 
-  constructor(private route:Router) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  logout() {
-    localStorage.removeItem("token-id");
-    this.route.navigate(["/login"]);
-  }
 }
