@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as price from '../../common/config/prices.json';
 
 @Component({
   selector: 'app-prices',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./prices.component.css']
 })
 export class PricesComponent implements OnInit {
-
+  price_list = price['default'];
   constructor() { }
 
   ngOnInit() {

@@ -1,0 +1,28 @@
+[
+    {
+        "Product_Code" : "52656",
+        "Product_Name": "Maggi",
+        "Original_Cost": "15",
+        "mrp":"25",
+        "Discount":"Y",
+        "Sale_Price":"23"
+    },
+    {
+        "Product_Code" : "58963",
+        "Product_Name": "BRU",
+        "Original_Cost": "65",
+        "mrp":"98",
+        "Discount":"Y",
+        "Sale_Price":"90"
+    },
+    {
+        "Product_Code" : "52656",
+        "Product_Name": "Green Tea",
+        "Original_Cost": "30",
+        "mrp":"75",
+        "Discount":"Y",
+        "Sale_Price":"63"
+    }
+    
+
+]

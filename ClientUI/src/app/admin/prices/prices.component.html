@@ -1,1 +1,23 @@
-<p>prices works!</p>
+<table class="table table-striped text-center">
+    <thead class="bg-dark text-light">
+        <tr>
+            <th>Product Code</th>
+            <th>Product Name</th>
+            <th>Original Cost</th>
+            <th>MRP</th>
+            <th>Discount</th>
+            <th>Sale Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of price_list">
+            <td>{{p.Product_Code}}</td>
+            <td>{{p.Product_Name}}</td>
+            <td>{{p.Original_Cost}}</td>
+            <td>{{p.mrp}}</td>
+            <td>{{p.Discount}}</td>
+            <td>{{p.Sale_Price}}</td>
+          
+        </tr>
+    </tbody>
+</table>
