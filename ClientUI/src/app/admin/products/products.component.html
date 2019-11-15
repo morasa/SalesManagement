@@ -1,11 +1,9 @@
-<div class="mx-auto w-50">
-    <div class="nav nav-pills" id="v-pills-tab" role="tablist">
-        <a class="nav-link active" data-toggle="pill" href="javascript:void(0);" routerLink="./">Products</a>
-        <a class="nav-link" data-toggle="pill" href="javascript:void(0);" routerLink="./add-product">Add Product</a>
-      
+<div class="">
+    <div class="row border text-center">
+        <div class="col p-2 border" routerLink="./productdetails" routerLinkActive="active">Products</div>
+        <div class="col p-2 border" routerLink="./add-product" routerLinkActive="active">Add products</div>
+       
+        
     </div>
-</div>
-
-<div class="m-3">
     <router-outlet></router-outlet>
 </div>

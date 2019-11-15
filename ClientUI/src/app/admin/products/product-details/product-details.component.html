@@ -1,23 +1,61 @@
-<table class="table table-striped text-center">
-    <thead class="bg-dark text-light">
-        <tr>
-            <th>Product Code</th>
-            <th>Product Name</th>
-            <th>Product Category</th>
-            <th>Product Manufacture</th>
-            <th>Product Type</th>
-            <th>Product Status</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let product of product_details">
-            <td>{{product.Product_Code}}</td>
-            <td>{{product.Product_Name}}</td>
-            <td>{{product.Product_cat}}</td>
-            <td>{{product.Product_Manufacture}}</td>
-            <td>{{product.Product_type}}</td>
-            <td>{{product.Product_status}}</td>
-          
-        </tr>
-    </tbody>
-</table>
+<br>
+<div class="container">
+    <h5>Search</h5>
+    <div class="">
+        <div class="row border border-bottom-0" style="padding-top:10px">
+            <div class="col">
+                <label for="" class="p-1 w-50 text-center">Order Status</label>
+                <select name="" id="" class="p-1 w-50">
+                    <option value="" disabled>Select Status</option>
+                </select>
+            </div>
+            <div class="col">
+                <label for="" class="p-1 w-50 text-center">Created Date</label>
+                <input type="text" name="" id="" onfocus="(this.type='date')" placeholder="From Date" class="p-1  w-50">
+            </div>
+            <div class="col">
+                <label for="" class="p-1 w-50 text-center">Created Date</label>
+                <input type="text" name="" id="" onfocus="(this.type='date')" placeholder="To Date" class="p-1 w-50">
+            </div>
+        </div>
+        <div class="row border"></div>
+        <div class="row border p-4 border-top-0"></div>
+    </div>
+    <br>
+    <div class="">
+        <h5>Products List</h5>
+        <div class="row">
+            <table class="table table-bordered text-center m-1">
+                <thead class="">
+                    <tr>
+                        <th>S.No.</th>
+                        <th>Product Code</th>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Manufacture</th>
+                        <th>Product Size</th>
+                        <th>Product Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of product_details; let i=index">
+                        <td>{{i}}</td>
+                        <td>{{product.Product_Code}}</td>
+                        <td>{{product.Product_Name}}</td>
+                        <td>{{product.Product_cat}}</td>
+                        <td>{{product.Product_Manufacture}}</td>
+                        <td>{{product.Product_type}}</td>
+                        <td>{{product.Product_status}}</td>
+                        <td><input type="button" value="Show Details" class="btn btn-info"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+

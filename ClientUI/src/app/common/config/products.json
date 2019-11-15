@@ -5,7 +5,7 @@
         "Product_cat": "Food",
         "Product_Manufacture":"Nestle",
         "Product_type":"100 Grams",
-        "Product_status":"Good"
+        "Product_status":"Available"
     },
     {
         "Product_Code" : "58963",
@@ -13,14 +13,14 @@
         "Product_cat": "Food",
         "Product_Manufacture":"Nestle",
         "Product_type":"200 Grams",
-        "Product_status":"Good"
+        "Product_status":"Available"
     },{
         "Product_Code" : "52656",
         "Product_Name": "Green Tea",
         "Product_cat": "Food",
         "Product_Manufacture":"Lipton",
         "Product_type":"100 Grams",
-        "Product_status":"Damaged"
+        "Product_status":"Available"
     }
     
 
