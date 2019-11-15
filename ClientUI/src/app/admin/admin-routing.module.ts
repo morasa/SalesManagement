@@ -30,7 +30,8 @@ const routes: Routes = [
           { path: "dashboard", component: DashboardComponent },
           { path: "current-orders", component: CurrentOrdersComponent },
           { path: "generate-order", component: GenerateOrderComponent },
-          { path: "new-order", component: NewOrderComponent }          
+          { path: "new-order", component: NewOrderComponent },
+          { path: "", redirectTo: "dashboard", pathMatch: "prefix" }
         ]
       },
       { path: "prices", component: PricesComponent },
