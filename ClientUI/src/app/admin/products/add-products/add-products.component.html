@@ -1,43 +1,45 @@
 <div class="container">
  
-    <form class="form-horizontal">
+    <form class="form-horizontal" (submit)="addproduct()">
      
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="pn">Product Code:</label>
+        <div class="col-sm-10">          
+          <input type="text" class="form-control" id="pc" placeholder="Enter Product Code" name="pc">
+        </div>
+      </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="pn">Product Name:</label>
         <div class="col-sm-10">          
-          <input type="text" class="form-control" id="pn" placeholder="Enter Product Name" name="pwd">
+          <input type="text" class="form-control" id="pn" placeholder="Enter Product Name" name="pn">
         </div>
       </div>
       <div class="form-group">
-        <label class="control-label col-sm-2" for="pc">Product Category:</label>
-        <div class="col-sm-10">          
-          <input type="text" class="form-control" id="pc" placeholder="Enter Product Category" name="pwd">
+        <label class="control-label col-sm-6" for="ps">Product Category</label>
+        <div class="col-sm-10">     
+        <select class="form-control" >
+              <option *ngFor = "let cat of productcategorys">{{cat}}</option>
+        </select>
         </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-6" for="ps">Product Manufacture</label>
+      <div class="col-sm-10">     
+      <select class="form-control">
+            <option *ngFor = "let manufacturer of productmanufature">{{manufacturer}}</option>
+            
+      </select>
       </div>
-      <div class="form-group">
-        <label class="control-label col-sm-4" for="pn">Product Manufacture::</label>
-        <div class="col-sm-10">          
-          <input type="text" class="form-control" id="pn" placeholder="Enter Product Name" name="pwd">
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label col-sm-2" for="pm">Product Type</label>
-        <div class="col-sm-10">          
-          <input type="text" class="form-control" id="pm" placeholder="Enter Product Type" name="pwd">
-        </div>
-      </div>
+  </div>
       <div class="form-group">
           <label class="control-label col-sm-6" for="ps">Product Status</label>
           <div class="col-sm-10">     
           <select class="form-control">
-                <option>Good</option>
-                <option>Damaged</option>
-                <option>Expired</option>
-                <option>Garbage</option>
+                <option *ngFor = "let status of productstatus">{{status}}</option>
+                
           </select>
           </div>
       </div>
-      
      
       <div class="form-group">        
         <div class="col-sm-offset-2 col-sm-10">
