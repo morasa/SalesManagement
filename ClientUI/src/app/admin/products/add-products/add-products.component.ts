@@ -11,5 +11,10 @@ export class AddProductsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+productcategorys = ["Food","Kitchen","Washing"];
+productmanufature = ['Nestle','SurfEcXcel','Ashirvad'];
+productstatus =["Active", "InActive"]
+addproduct(){
+  console.log("added")
+}
 }
