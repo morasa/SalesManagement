@@ -21,6 +21,7 @@ const routes: Routes = [
     path: "admin",
     component: AdminComponent,
     children: [
+      { path: "", redirectTo: "orders", pathMatch: "prefix" },/* doesnt work */
       { path: "discounts", component: DiscountsComponent },
       { path: "items", component: ItemsComponent },
       {
@@ -38,7 +39,7 @@ const routes: Routes = [
       {
         path: "products", component: ProductsComponent,
         children: [
-          { path: '', component: ProductDetailsComponent },
+          { path: 'productdetails', component: ProductDetailsComponent },
           { path: 'add-product', component: AddProductsComponent }
         ]
       },
