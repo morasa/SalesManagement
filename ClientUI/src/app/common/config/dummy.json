@@ -3,7 +3,7 @@
         {
             "name": "Aditya",
             "password": "aditya12345",
-            "type": "admin"
+            "type": "staff"
         },
         {
             "name": "Kranti",
@@ -14,6 +14,11 @@
             "name": "Shiva",
             "password": "shiva12345",
             "type": "staff"
+        },
+        {
+            "name": "Guru",
+            "password": "guru12345",
+            "type": "admin"
         }
     ],
     "status": [
