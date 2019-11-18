@@ -8,7 +8,7 @@ import { UsersModule } from './users/users.module';
 import { LoginModule } from './login/login.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CommonComponentComponent } from './common-component/common-component.component';
-
+import {HttpClientModule} from "@angular/common/http"
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { CommonComponentComponent } from './common-component/common-component.co
     AdminModule,
     UsersModule,
     LoginModule,
-    AppRoutingModule   
+    AppRoutingModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

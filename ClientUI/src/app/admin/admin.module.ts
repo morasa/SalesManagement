@@ -14,13 +14,15 @@ import { NewOrderComponent } from './orders/new-order/new-order.component';
 import { ProductDetailsComponent } from './products/product-details/product-details.component';
 import { AddProductsComponent } from './products/add-products/add-products.component';
 import { DashboardComponent } from './orders/dashboard/dashboard.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
 
 @NgModule({
   declarations: [OrdersComponent, ProductsComponent, ItemsComponent, PricesComponent, DiscountsComponent, AdminComponent, CurrentOrdersComponent, GenerateOrderComponent, NewOrderComponent, ProductDetailsComponent, AddProductsComponent, DashboardComponent],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,FormsModule,ReactiveFormsModule
+ 
   ]
 })
 export class AdminModule { }
