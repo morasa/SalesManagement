@@ -8,19 +8,22 @@ import { UsersModule } from './users/users.module';
 import { LoginModule } from './login/login.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CommonComponentComponent } from './common-component/common-component.component';
-
+import { HeaderComponent } from './common/header/header.component';
+import { FooterComponent } from './common/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    CommonComponentComponent
+    CommonComponentComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AdminModule,
     UsersModule,
     LoginModule,
-    AppRoutingModule   
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
