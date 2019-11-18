@@ -1,1 +1,29 @@
-<p>prices works!</p>
+<div class="">
+    <h5>Prices List</h5>
+    <div class="row">
+        <table class="table table-bordered text-center m-1">
+            <thead class="">
+                <tr>
+                    <th>Batch Code</th>
+                    <th>Product Code</th>
+                    <th>Product Name</th>
+                    <th>Original Cost</th>
+                    <th>MRP</th>
+                    <th>Sale Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let p of price_list">
+                    <td>{{p.Batch_Code}}</td>
+                    <td>{{p.Product_Code}}</td>
+                    <td>{{p.Product_Name}}</td>
+                    <td>{{p.Original_Cost}}</td>
+                    <td>{{p.mrp}}</td>
+                    <td>{{p.Sale_Price}}</td>
+                    <td><input type="button" value="Updateprice" class="btn btn-info"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
