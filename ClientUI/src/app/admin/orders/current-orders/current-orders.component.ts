@@ -26,16 +26,14 @@ export class CurrentOrdersComponent implements OnInit {
   }
   initiateList() {
     for (let i = 0; i < Math.ceil(Math.random() * 10); i++) {
-      setTimeout(() => {
-        this.currentOrders.push(
-          {
-            order_id: Math.ceil(Math.random() * 100000),
-            created_date: Date.now(),
-            created_by: dummy.users[Math.floor(Math.random() * dummy.users.length)].name,
-            status: dummy.status[(Math.floor(Math.random() * dummy.status.length))]
-          }
-        );
-      }, 1000);
+      this.currentOrders.push(
+        {
+          order_id: Math.ceil(Math.random() * 100000),
+          created_date: Date.now(),
+          created_by: dummy.users[Math.floor(Math.random() * dummy.users.length)].name,
+          status: dummy.status[(Math.floor(Math.random() * dummy.status.length))]
+        }
+      );
     }
   }
 }

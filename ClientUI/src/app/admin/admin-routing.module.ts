@@ -42,7 +42,8 @@ const routes: Routes = [
           { path: 'productdetails', component: ProductDetailsComponent },
           { path: 'add-product', component: AddProductsComponent }
         ]
-      }
+      },
+      { path: "", redirectTo: "orders", pathMatch: "full" }
     ]
   }
 ];

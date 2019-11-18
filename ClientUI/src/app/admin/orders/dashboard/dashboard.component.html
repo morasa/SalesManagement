@@ -1,1 +1,24 @@
-<p>dashboard works!</p>
+<div class="row">
+    <div class="col-sm-6 mt-3" *ngFor="let item of tables | keyvalue">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="bg-secondary text-light">
+                    <th class="border-right-0 w-75" colspan="3">Last Five {{item.key}}</th>
+                    <th class="border-left-0 text-right w-25">
+                        <input type="button" value="View All" class="btn btn-info">
+                    </th>
+                </tr>
+                <tr>
+                    <th class="w-25">S.No.</th>
+                    <th class="w-25" *ngFor="let each of item.value[0] | keyvalue">{{each.key}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let val of item.value; let i = index">
+                    <td>{{i+1}}</td>
+                    <td *ngFor="let eachVal of val | keyvalue">{{eachVal.value}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
