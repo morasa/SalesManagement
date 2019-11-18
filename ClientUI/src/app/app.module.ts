@@ -9,6 +9,8 @@ import { LoginModule } from './login/login.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CommonComponentComponent } from './common-component/common-component.component';
 import {HttpClientModule} from "@angular/common/http"
+import { CustomDatePipe } from './common/pipes/custom-date.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,

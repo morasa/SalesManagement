@@ -16,9 +16,13 @@ import { AddProductsComponent } from './products/add-products/add-products.compo
 import { DashboardComponent } from './orders/dashboard/dashboard.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 
+import { CustomDatePipe } from '../common/pipes/custom-date.pipe';
 
 @NgModule({
-  declarations: [OrdersComponent, ProductsComponent, ItemsComponent, PricesComponent, DiscountsComponent, AdminComponent, CurrentOrdersComponent, GenerateOrderComponent, NewOrderComponent, ProductDetailsComponent, AddProductsComponent, DashboardComponent],
+  declarations: [OrdersComponent, ProductsComponent, ItemsComponent, 
+    PricesComponent, DiscountsComponent, AdminComponent, 
+    CurrentOrdersComponent, GenerateOrderComponent, NewOrderComponent, 
+    ProductDetailsComponent, AddProductsComponent, DashboardComponent,CustomDatePipe],
   imports: [
     CommonModule,
     AdminRoutingModule,FormsModule,ReactiveFormsModule

@@ -44,6 +44,7 @@ export class DashboardComponent implements OnInit {
     this.inprocessOrders.shift();
     this.receivedOrders.shift();
     this.savedOrders.shift();
+    
     for (let i = 0; i < 5; i++) {
       this.createdOrders.push({ "Order ID": this.randNum(), "Created Date": this.date, "Created By": dummy.users[Math.floor(Math.random() * dummy.users.length)].name })
       this.inprocessOrders.push({ "Order ID": this.randNum(), "Created Date": this.date, "Created By": dummy.users[Math.floor(Math.random() * dummy.users.length)].name })
